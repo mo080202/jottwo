@@ -1,7 +1,13 @@
-- @jots.each do |jot|
-  = jot.content
-  br
-  = jot_author(jot)
-  br
-  br
-= link_to 'New jot', new_jot_path
+.content
+  .content-padded
+    h2 Jots
+    = link_to 'New jot', new_jot_path
+    ul.table-view
+      - @jots.each do |jot|
+        li.table-view-cell.media
+          a.navigate-right href=edit_jot_path(jot)
+            img.media-object.pull-left src="http://placehold.it/42x42"
+            .media-body
+              = jot.content
+              p
+                = jot_author(jot)

@@ -1,5 +1,7 @@
-h2 New user
-= form_for @user do |f|
-  => f.label :email, 'Email:'
-  = f.text_area :email
-  = f.submit
+.content
+  .content-padded
+    h2 New user
+    = form_for @user do |f|
+      => f.label :email, 'Type your email address'
+      = f.text_area :email
+      = f.submit class: 'btn btn-primary btn-block'

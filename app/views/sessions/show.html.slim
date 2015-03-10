@@ -1,8 +1,10 @@
-h2 Please sign in
-= form_tag
-  label> User name
-  input type="text" id="email" name="email" placeholder="Email"
-  br
-  button type="submit" Sign in
-
-= link_to "Need a login?", new_user_path
+.content
+  .content-padded
+    h2 Please sign in
+    = form_tag
+      input type="text" id="email" name="email" placeholder="Email"
+      br
+      button.btn.btn-primary type="submit" Sign in
+      br
+      br
+    = link_to "Need a login?", new_user_path

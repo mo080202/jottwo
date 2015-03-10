@@ -1,0 +1,7 @@
+- @jots.each do |jot|
+  = jot.content
+  br
+  = jot_author(jot)
+  br
+  br
+= link_to 'New jot', new_jot_path

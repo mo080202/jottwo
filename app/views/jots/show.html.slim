@@ -1,0 +1,19 @@
+.content
+  .content-padded
+    br
+    br
+    h2 = @jot.content
+    p
+      ' Posted by
+      = jot_author(@jot)
+
+    p
+      - if has_not_liked?(@jot)
+        = button_to 'Like', like_jot_path(@jot), class: 'btn btn-positive'
+      - else
+        = button_to 'Unlike', unlike_jot_path(@jot), class: 'btn btn-positive btn-outlined'
+
+    p
+    = link_to 'Edit', edit_jot_path(@jot), class: 'btn btn-primary'
+    p
+    = link_to "Delete", jot_path(@jot), method: :delete, class: 'btn btn-negative'

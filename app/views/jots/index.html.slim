@@ -6,7 +6,7 @@
       - @jots.each do |jot|
         li.table-view-cell.media
           a.navigate-right href=jot_path(jot)
-            img.media-object.pull-left src="http://placehold.it/42x42"
+            img.media-object.pull-left src=jot.photo.url(:medium)
             .media-body
               = jot.content
               p

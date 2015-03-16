@@ -1,4 +1,5 @@
-= form_for @jot do |f|
+= form_for @jot, html: { :multipart => true } do |f|
   = f.label :content, 'Jot:'
   = f.text_field :content
+  = f.file_field :photo
   = f.submit class: 'btn btn-primary'
